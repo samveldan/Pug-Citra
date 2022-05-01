@@ -654,6 +654,7 @@ h2{
   left: 0;
   right: 0;
   min-width: 100vw;
+  min-height: 100vh;
   bottom: 0;
   z-index: 50;
   border: 0;
@@ -899,7 +900,6 @@ h2{
   background-color: #fff;
   padding-top: 49px;
   &__phone-p {
-    text-decoration: none;
     color: #000;
   }
   @media screen and (max-width: 576px) {
