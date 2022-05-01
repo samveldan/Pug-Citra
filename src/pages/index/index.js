@@ -223,7 +223,7 @@ burger.addEventListener("click", () => {
   burger.classList.add("active");
   menu.classList.add("show");
 
-  menu.addEventListener("transitionend", function modalTransition() {
+  burger.addEventListener("transitionend", function modalTransition() {
     window.addEventListener("click", function hideModal(e) {
       if(e.target == overlay) {
         menu.classList.remove("show");
