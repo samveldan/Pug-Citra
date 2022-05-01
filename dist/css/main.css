@@ -1034,6 +1034,10 @@ h2 span {
   background-color: #fff;
   padding-top: 49px;
 }
+.map__phone-p {
+  text-decoration: none;
+  color: #000;
+}
 @media screen and (max-width: 576px) {
   .map {
     padding: 49px 0;
@@ -1103,6 +1107,7 @@ h2 span {
   width: 100%;
 }
 .map__info-select select {
+  background-color: transparent;
   font-size: 16px;
   padding-bottom: 15px;
   border: 0;
@@ -1117,6 +1122,7 @@ h2 span {
   background-position-x: 100%;
   width: 100%;
   font-weight: 600;
+  color: #000;
 }
 .map__info-pretitle {
   font-size: 20px;

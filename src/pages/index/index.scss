@@ -898,6 +898,10 @@ h2{
 .map {
   background-color: #fff;
   padding-top: 49px;
+  &__phone-p {
+    text-decoration: none;
+    color: #000;
+  }
   @media screen and (max-width: 576px) {
     padding: 49px 0;
   }
@@ -951,6 +955,7 @@ h2{
     &-select {
       width: 100%;
       select {
+        background-color: transparent;
         font-size: 16px;
         padding-bottom: 15px;
         border: 0;
@@ -965,6 +970,7 @@ h2{
         background-position-x: 100%;
         width: 100%;
         font-weight: 600;
+        color: #000;
       }
     }
     &-pretitle {
