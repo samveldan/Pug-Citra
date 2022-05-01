@@ -180,6 +180,7 @@ button {
     top: 45%;
     transform: translate(0, -50%);
     margin-left: 70px;
+    z-index: 40;
   }
   &__content{
     font-size: 20px;
@@ -278,7 +279,7 @@ button {
         display: none;
       }
       &:nth-child(3) {
-        margin-bottom: 12px;
+        margin-bottom: 13px;
         transform: rotate(-45deg);
       }
     }
@@ -655,7 +656,10 @@ h2{
   min-width: 100vw;
   bottom: 0;
   z-index: 50;
+  border: 0;
+  outline: none;
   cursor: pointer;
+  color: transparent;
 }
 
 .modal__certificate {
@@ -1438,7 +1442,7 @@ h2{
   }
   .menu__list{
     transition: .5s all;
-    transform: translateX(-100%);
+    transform: translateX(-110%);
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
