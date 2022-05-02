@@ -730,20 +730,17 @@ h2{
     }
   }
   &__slider {
-    max-width: 77%;
+    max-width: 75%;
     margin-left: auto;
     @media screen and (max-width: 1250px) {
-      max-width: 66%;
       margin-left: 60px;
     }
     @media screen and (max-width: 1140px) {
-      max-width: 70%;
-      margin-left: 0px;
+      max-width: 100%;
       margin: 0 auto;
       margin-top: 30px;
     }
     @media screen and (max-width: 800px) {
-      max-width: 85%;
       margin-left: 0px;
       margin: 0 auto;
       margin-top: 20px;
@@ -765,19 +762,29 @@ h2{
     font-size: 14px;
     z-index: 1;
     width: 100%;
-    @media screen and (max-width: 1250px) {
-      max-width: 200px;
-      margin-left: 31px;
-    }
     img {
       max-width: 100%;
       height: auto;
       cursor: pointer;
+      min-height: 411px;
+      @media screen and (max-width: 1200px) {
+        height: auto;
+      }
+      @media screen and (max-width: 540px) {
+        display: block;
+        margin: 0 auto;
+        min-height: auto;
+        height: 375px;
+      }
     }
     p {
       line-height: 17px;
       margin-top: 11px;
-      color: #232E23
+      color: #232E23;
+      @media screen and (max-width: 540px) {
+        font-size: 20px;
+        text-align: center;
+      }
     }
   }
 }

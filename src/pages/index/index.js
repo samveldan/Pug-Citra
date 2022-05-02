@@ -7,12 +7,26 @@ import IMask from 'imask';
 let certifSlider = tns({
     container: '.certificate__slider-inner',
     items: 3,
+    gutter : 20,
     slideBy: 'page',
     loop : true,
     controls : true,
     nav : false,
     prevButton : ".certificate__slider-prev",
     nextButton : ".certificate__slider-next",
+    responsive : {
+      768 : {
+        items : 3
+      },
+      540 : {
+        items : 2
+      },
+      0 : {
+        items : 1,
+        gutter: 0,
+        center : true
+      }
+    }
 });
   
 let newsSlider = tns({
