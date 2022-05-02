@@ -664,7 +664,7 @@ h2{
   top: 0;
   left: 0;
   right: 0;
-  min-width: 100vw;
+  width: 100vw;
   height: 100vh;
   bottom: 0;
   z-index: 50;
@@ -1361,6 +1361,9 @@ h2{
     align-items: center;
     margin-bottom: 15px;
     padding: 0 30px;
+    @media screen and (max-width: 620px) {
+      padding: 0 10px;
+    }
   }
   &__date {
     font-weight: 500;
@@ -1371,15 +1374,15 @@ h2{
   &__close {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: baseline;
     cursor: pointer;
-    button {
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 13px;
-      text-transform: uppercase;
-      background-color: transparent;
-      margin-bottom: 1px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: transparent;
+    line-height: 1;
+    span {
+      margin-left: 5px;
     }
   }
   &__inner {
@@ -1604,7 +1607,6 @@ h2{
     font-size: 16px;
     margin-top: 10px;
     margin-left: 0;
-    height: 41px;
     width: 150px;
   }
   .video__content {
@@ -1649,7 +1651,7 @@ h2{
     width:50%;
   }
   h2 {
-    font-size: 25px;
+    font-size: 28px;
     line-height: 27px;
     color: #232E23;
     font-family: "TTCommons";

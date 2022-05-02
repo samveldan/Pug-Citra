@@ -769,7 +769,7 @@ h2 span {
   top: 0;
   left: 0;
   right: 0;
-  min-width: 100vw;
+  width: 100vw;
   height: 100vh;
   bottom: 0;
   z-index: 50;
@@ -1568,6 +1568,11 @@ h2 span {
   margin-bottom: 15px;
   padding: 0 30px;
 }
+@media screen and (max-width: 620px) {
+  .news-modal__header {
+    padding: 0 10px;
+  }
+}
 .news-modal__date {
   font-weight: 500;
   font-size: 15px;
@@ -1577,16 +1582,16 @@ h2 span {
 .news-modal__close {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
-  cursor: pointer;
-}
-.news-modal__close button {
+  align-items: baseline;
   cursor: pointer;
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
   background-color: transparent;
-  margin-bottom: 1px;
+  line-height: 1;
+}
+.news-modal__close span {
+  margin-left: 5px;
 }
 .news-modal__inner {
   max-width: 838px;
@@ -1840,7 +1845,6 @@ h2 span {
     font-size: 16px;
     margin-top: 10px;
     margin-left: 0;
-    height: 41px;
     width: 150px;
   }
 
@@ -1894,7 +1898,7 @@ h2 span {
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 28px;
     line-height: 27px;
     color: #232E23;
     font-family: "TTCommons";
