@@ -446,6 +446,28 @@ h2{
       font-family: "TTCommons";
       font-weight: 500;
       transition: 0.4s;
+      &.active {
+        opacity: 1;
+        & + label{
+          opacity: 1;
+          font-size: 15px;
+          line-height: 17px;
+          top: -13px;
+          font-family: 'TTCommons';
+          font-weight: 500;
+        }
+        &:valid{
+          opacity: 1;
+        }
+        & + label {
+          opacity: 1;
+          font-size: 15px;
+          line-height: 17px;
+          top: -13px;
+          font-family: 'TTCommons';
+          font-weight: 500;
+        }
+      }
       &:focus {
         opacity: 1;
         & + label{

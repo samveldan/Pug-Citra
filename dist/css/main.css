@@ -546,6 +546,28 @@ h2 span {
   font-weight: 500;
   transition: 0.4s;
 }
+.form__field input.active {
+  opacity: 1;
+}
+.form__field input.active + label {
+  opacity: 1;
+  font-size: 15px;
+  line-height: 17px;
+  top: -13px;
+  font-family: "TTCommons";
+  font-weight: 500;
+}
+.form__field input.active:valid {
+  opacity: 1;
+}
+.form__field input.active + label {
+  opacity: 1;
+  font-size: 15px;
+  line-height: 17px;
+  top: -13px;
+  font-family: "TTCommons";
+  font-weight: 500;
+}
 .form__field input:focus {
   opacity: 1;
 }

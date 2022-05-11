@@ -103,13 +103,14 @@ phoneInputs.forEach(item => {
   })
 })
 
-// const formInputs = document.querySelectorAll("form input");
-// formInputs.forEach(input => {
-//   input.addEventListener("input", function() {
-//     if(this.value.length != 0) this.classList.add("active");
-//     else this.classList.remove("active");
-//   })
-// })
+const formInputs = document.querySelectorAll("form input");
+formInputs.forEach(input => {
+  input.addEventListener("input", function() {
+    if(this.value.length != 0) this.classList.add("active");
+    else this.classList.remove("active");
+  })
+})
+
 
 const forms = document.querySelectorAll("form");
 const successBlock = document.querySelector(".phone-modal__success");
