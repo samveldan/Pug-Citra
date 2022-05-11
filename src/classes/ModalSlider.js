@@ -10,6 +10,7 @@ export default class ModalSlider {
       this.slides.forEach(slide => {
         slide.addEventListener("click", (e) => {
           let inner = this.modalBlock.querySelector(".modal-inner");
+          document.body.classList.add("disable");
   
           let item = e.target.closest(".for-modal-slide");
           let img = item.querySelector("img").src.replace("http://localhost:5500/", "");
@@ -54,6 +55,7 @@ export default class ModalSlider {
             innerChildren.className = (this.modalBlock.className + "-inner") + " modal-inner";
             innerChildren.id = "";
             innerChildren.innerHTML = "";
+            document.body.classList.remove("disable");
         
             this.modalBlock.classList.add("hide");
             this.modalOverlay.classList.add("hide");

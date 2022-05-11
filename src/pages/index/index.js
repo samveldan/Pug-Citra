@@ -19,7 +19,9 @@ let certifSlider = tns({
         items : 3
       },
       540 : {
-        items : 2
+        items : 2,
+        center: false,
+        gutter : 20
       },
       0 : {
         items : 1,
@@ -41,14 +43,14 @@ let newsSlider = tns({
     gutter : 20,
     responsive : {
       992 : {
-        items : 4.35
+        items : 4.3,
       },
       576 : {
         items : 3
       },
       350 : {
         items : 2,
-        gutter : 20
+        gutter : 15
       },
       0 : {
         items : 1,
@@ -101,13 +103,13 @@ phoneInputs.forEach(item => {
   })
 })
 
-const formInputs = document.querySelectorAll("form input");
-formInputs.forEach(input => {
-  input.addEventListener("input", function() {
-    if(this.value.length != 0) this.classList.add("active");
-    else this.classList.remove("active");
-  })
-})
+// const formInputs = document.querySelectorAll("form input");
+// formInputs.forEach(input => {
+//   input.addEventListener("input", function() {
+//     if(this.value.length != 0) this.classList.add("active");
+//     else this.classList.remove("active");
+//   })
+// })
 
 const forms = document.querySelectorAll("form");
 const successBlock = document.querySelector(".phone-modal__success");
@@ -137,6 +139,7 @@ phoneButton.addEventListener("click", () => {
   successBlock.classList.add("hide");
   phoneForm.classList.remove("hide");
   phoneModal.classList.remove("success");
+  document.body.classList.add("disable");
 
   phoneModal.classList.remove("up-hide");
   overlay.classList.remove("hide");
@@ -146,6 +149,7 @@ phoneButton.addEventListener("click", () => {
       if(e.target == overlay || e.target.closest(".phone-modal__close")) {
         phoneModal.classList.add("up-hide");
         overlay.classList.add("hide");
+        document.body.classList.remove("disable");
 
         window.removeEventListener("click", hideModal);
         phoneModal.removeEventListener("transitionend", modalTransition);
@@ -157,6 +161,7 @@ phoneButton.addEventListener("click", () => {
 function showSuccessBlock() {
   phoneModal.classList.remove("up-hide");
   overlay.classList.remove("hide");
+  document.body.classList.add("disable");
 
   phoneModal.addEventListener("transitionend", function modalTransition() {
     window.addEventListener("click", function hideModal(e) {
@@ -182,12 +187,14 @@ moreBtns.forEach(btn => {
   btn.addEventListener("click", function() {
     overlay.classList.remove("hide");
     moreModal.classList.remove("opacity-hide");
+    document.body.classList.add("disable");
     
     moreModal.addEventListener("transitionend", function modalTransition() {
       window.addEventListener("click", function hideModal(e) {
         if(e.target == overlay || e.target.closest(".safety-modal__close")) {
           moreModal.classList.add("opacity-hide");
           overlay.classList.add("hide");
+          document.body.classList.remove("disable");
   
           window.removeEventListener("click", hideModal);
           moreModal.removeEventListener("transitionend", modalTransition);
@@ -207,6 +214,7 @@ newsItems.forEach(item => {
   item.addEventListener("click", () => {
     let title = item.nextElementSibling;
     newsModal.querySelector("h3").innerText = title.innerText;
+    document.body.classList.add("disable");
 
     overlay.classList.remove("hide");
     newsModal.classList.remove("opacity-hide");
@@ -216,6 +224,7 @@ newsItems.forEach(item => {
         if(e.target == overlay || e.target.closest(".news-modal__close")) {
           newsModal.classList.add("opacity-hide");
           overlay.classList.add("hide");
+          document.body.classList.remove("disable");
   
           window.removeEventListener("click", hideModal);
           newsModal.removeEventListener("transitionend", modalTransition);
